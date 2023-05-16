@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>instagram</title>
+	<link rel="icon" type="image/x-icon" href="image/logo.png">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+			margin: 0px;
+			padding: 0px;
+		}
+		#login-page{
+			display: grid;
+			grid-template-columns: auto auto;
+			justify-content:space-around;
+			align-items: center;
+			height: 100vh;
+			margin-top: 20px;
+		}
+		#login-form{
+			min-width: 300px;
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			padding: 30px 30px;
+			border: 1px solid lightgrey;
+		}
+		form{
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		input{
+			width: 100%;
+		}
+		#form{
+			min-width: 150px;
+			position: relative;
+			right: 50px;
+		}
+		#login-form form input{
+			height: 30px;
+			width: 250px;
+			border: 1px solid lightgrey;
+			border-radius: 5px;
+			padding: 0px 10px;
+		}
+		a{
+			text-decoration: none;
+			color: darkcyan;
+		}
+		#sign-up{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 20px 0px;
+			border: 1px solid lightgrey;
+		}
+		#app{
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			padding: 15px 0px;
+		}
+		div#login-links{
+			margin-top: 40px;
+			text-align: center;
+			padding: 50px 0px;
+			word-spacing: 10px;
+		}
+		div#login-links>select{
+			border: none;
+		}	
+		@media only screen and (min-width:200px) and (max-width:741px){
+			#phone{
+				display: none;
+			}
+			#form{
+				width: 90%;
+				display: inline-block;
+				justify-content: center;
+				align-items: center;
+				position: static;
+				top: 40px;
+				padding: 0px;
+				margin:auto;
+			}
+			#login-form {
+			    display: grid;
+			    justify-content: center;
+			    align-items: center;
+			    padding: 30px 30px;
+			    border:none;
+			}
+			#sign-up{
+				border: none;
+			}
+			div#login-links {
+				line-height: 6vh;
+			    font-size: 14px;
+			    padding: 28px 33px;
+			}
+		}
+		@media only screen and (min-width:742px) and (max-width:992px){
+			#login-page{
+				padding: 20px 5px;
+			}
+			#phone img{
+				height: 530px;
+			}
+			#login-page{
+				display: flex;
+				justify-content:space-between;
+			}
+			div#login-links {
+				margin-top: 30px;
+				line-height: 6vh;
+			    font-size: 15px;
+			    padding: 28px 33px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="login-page">
+
+			<!-- phone -->
+
+		<div id="phone">
+			<img src="image/backphone.jpg" height="600px">
+		</div>
+
+		<!-- login form -->
+
+		<div id="form">
+			<div id="login-form">
+				<h1 style="font-family: 'Edwardian Script ITC';font-size:40px;letter-spacing:5px;text-align: center;">Instagram</h1><br><br>
+				<form onsubmit="return form()" action="home page.html">
+					<input id="f1" type="text" name="username" placeholder="Phone number,username,or email"><br>
+					<input id="f2" type="password" name="password" placeholder="Password">
+					<br>
+					<button style="width:200px;background-color: deepskyblue;height: 30px;border: none;width: 256px;border-radius: 10px;color: white;font-weight: bolder;">Log in</button><br>
+					<hr style="width:250px"><br>
+					<a style="color: darkslategray;text-decoration: none;" href="https://www.facebook.com"><i class="fa-brands fa-square-facebook"></i>&ensp;<b>Log in with Facebook</b></a><br>
+					<span id="passError" style="color: red;"></span><br>
+					<a href="#">Forgot password?</a>
+				</form>
+			</div><br>
+			<div id="sign-up">
+				Don't have an account?<a href="#" style="font-weight: bolder;color: deepskyblue;">Sign up</a>
+			</div>
+			<div id="app">
+				<span style="text-align: center;color: deepskyblue;">Get the app</span><br>
+				<img src="image/app.png" style="border-radius: 10px;" usemap="#map">
+					<map name="map">
+						<area shape="rect" coords="1,2,131,36" href="https://play.google.com/store/apps/details?id=com.instagram.android" target="_blank">
+						<area shape="rect" coords="141,0,250,37" href="https://apps.microsoft.com/store/detail/instagram/9NBLGGH5L9XT?hl=en-in&gl=in" target="_blank">
+					</map>
+			</div>
+		</div>
+	</div>
+		<div id="login-links">
+			<a href="#">Meta</a>
+			<a href="#">About</a>
+			<a href="#">Blog</a>
+			<a href="#">Jobs</a>
+			<a href="#">Help</a>
+			<a href="#">API</a>
+			<a href="#">Privacy</a>
+			<a href="#">Terms</a>
+			<a href="#">Top Accounts</a>
+			<a href="#">Locations</a>
+			<a href="#">Instagrame Lite</a>
+			<a href="#">Contact</a>
+			<a href="#">Uploading & Non-Users</a><br><br>
+			<select>
+				<option>English</option>
+				<option>Hindi</option>
+				<option>Bhojpuri</option>
+				<option>Bengoli</option>
+			</select><i style="word-spacing: 1px;">&emsp;&copy; 2023 Instagram from Meta</i>
+		</div>
+</body>
+	<script>
+		function form(){
+			var a=document.getElementById("f1").value;
+			var b=document.getElementById("f2").value;
+			if (a=="") {
+				document.getElementById("passError").innerHTML=" "
+				return false;
+			}
+			else if (a.length<5) {
+				document.getElementById("passError").innerHTML="Invalid username"
+				return false;
+			}
+			if (b=="") {
+				document.getElementById("passError").innerHTML=" "
+				return false;
+			}
+			else if (b.length<8) {
+				document.getElementById("passError").innerHTML="Sorry , your password was incorret.Please <br> double-check your password."
+				return false;
+			}
+			else if (b.search(/[A-Z]/)==-1) {
+				document.getElementById("passError").innerHTML="Sorry , your password was incorret.Please <br> double-check your password."
+				return false;
+			}
+			else if (b.search(/[a-z]/)==-1) {
+				document.getElementById("passError").innerHTML="Sorry , your password was incorret.Please <br> double-check your password."
+				return false;
+			}
+			else if(b.search(/[0-9]/)==-1){
+				document.getElementById("passError").innerHTML="Sorry , your password was incorret.Please <br> double-check your password."
+				return false;
+			}
+			else if ((b.search(/[!]/)==-1)&&(b.search(/[@]/)==-1)&&(b.search(/[#]/)==-1)&&(b.search(/[$]/)==-1)&&(b.search(/[%]/)==-1)&&(b.search(/[&]/)==-1)&&(b.search(/[*]/)==-1)) {
+				document.getElementById("passError").innerHTML="Sorry , your password was incorret.Please <br> double-check your password."
+				return false;
+			}
+		}
+	</script>
+</html>
